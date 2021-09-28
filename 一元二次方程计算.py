@@ -1,15 +1,19 @@
-#解一元二次方程
+#解一元二次方程-打包
+import msvcrt
 import math
+print('计算一元二次方程:\nax^2+bx+c=0')
+a=float(input('输入a='))
+b=float(input('输入b='))
+c=float(input('输入c='))
 def quadratic(a,b,c):
-    n = (-b+math.sqrt(b**2-4*a*c))/(2*a)
-    n2 = (-b-math.sqrt(b**2-4*a*c))/(2*a)
-    return n , n2
-print('quadratic(2, 3, 1) =', quadratic(2, 3, 1))
-print('quadratic(1, 3, -4) =', quadratic(1, 3, -4))
+    try:
+        n = (-b+math.sqrt(b**2-4*a*c))/(2*a)
+        n2 = (-b-math.sqrt(b**2-4*a*c))/(2*a)
+        return n , n2
+    except ValueError:
+        err='没有答案，负数平方根是开不出来哒T T'
+        return err
+print('答案x=',quadratic(a,b,c))
 
-if quadratic(2, 3, 1) != (-0.5, -1.0):
-    print('测试失败')
-elif quadratic(1, 3, -4) != (1.0, -4.0):
-    print('测试失败')
-else:
-    print('测试成功')
+print('感谢使用，任意键退出哦')
+ord(msvcrt.getch())
