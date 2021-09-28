@@ -1,5 +1,5 @@
-#解一元二次方程-打包
-import msvcrt
+#解一元二次方程-打包注释
+#import msvcrt
 import math
 print('计算一元二次方程:\nax^2+bx+c=0')
 a=float(input('输入a='))
@@ -15,5 +15,5 @@ def quadratic(a,b,c):
         return err
 print('答案x=',quadratic(a,b,c))
 
-print('感谢使用，任意键退出哦')
-ord(msvcrt.getch())
+#print('感谢使用，任意键退出哦')
+#ord(msvcrt.getch())
