@@ -15,7 +15,6 @@ def findMinAndMax(L):
                 MIN=value
             else:
                 pass
-            #print(i,value)
         L=(MIN, MAX)
     else:
         L=(None, None)
